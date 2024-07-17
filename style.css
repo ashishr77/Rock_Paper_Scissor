@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.container {
+    min-width:  100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(45deg, rgb(0, 0, 0) , rgb(0, 217, 255));
+}
+
+.container h2{
+    font-size: 3rem;
+    text-align: center;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    
+}
+
+.img{
+    text-align: center;
+    gap: 6rem;
+    font-weight: 500;
+    
+    
+}
+.img img{
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.7rem;
+    flex-wrap: nowrap;
+}
+
+.img img:hover{
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.score{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+}
+.computer , .user{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.6rem;
+}
+.computerScore , .userScore {
+    font-weight: bold;
+}
+
+.btn p{
+    background: rgb(0, 108, 185);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    border-radius: 9px;
+    padding: 0.3rem 1.5rem;
+}
+
+.btn p:hover{
+    box-shadow: none;
+    opacity: 0.8;
+    
+}
+
+@media (max-width: 360px) {
+    .container h2 {
+        font-size: 2.5rem;
+    }
+    
+    .score {
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .btn p{
+        font-size: 1rem;
+    }
+}
